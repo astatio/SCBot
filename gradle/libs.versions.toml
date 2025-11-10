@@ -1,0 +1,70 @@
+[versions]
+kotlin = "2.2.21"
+logbackClassic = "1.5.20"
+slf4j = "2.0.17"
+kotlinLogging = "7.0.13"
+shadow = "9.2.2"
+graalvm = "0.11.2"
+stacktraceDecoroutinator = "2.5.7" # from 2.4.3 to 2.4.8 it's broken
+kotlinxCoroutinesCore = "1.10.2"
+kotlinxSerializationCore = "1.9.0"
+kotlinScripting = "2.2.21"
+facebookKtfmt = "0.59"
+json = "20250517"
+debattyStringSimilarity = "2.0.0"
+apacheCommonsRng = "1.6"
+imgscalr = "4.2"
+mongodbDriver = "5.6.1"
+discordWebhooks = "0.8.4"
+jdaKtx = "78dbf82"
+oshi = "6.9.1"
+jansi = "2.4.2"
+jda = "6.1.1"
+jdaKtxv2 = "bcd62e2"
+ktor = "3.3.1"
+i4jv = "78.1"
+prometheus = "1.4.2"
+skiko = "0.9.30"
+
+[plugins]
+graalvm = { id = "org.graalvm.buildtools.native", version.ref = "graalvm" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+stackTraceDecoroutinator = { id = "dev.reformator.stacktracedecoroutinator", version.ref = "stacktraceDecoroutinator" }
+
+[libraries]
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logbackClassic" } # DO NOT UPGRADE THIS EVER AGAIN!!
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+kotlin-logging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlinLogging" }
+kotlin-scripting-jsr223 = { module = "org.jetbrains.kotlin:kotlin-scripting-jsr223", version.ref = "kotlinScripting" }
+facebook-ktfmt = { module = "com.facebook:ktfmt", version.ref = "facebookKtfmt" }
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationCore" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationCore" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-json = { module = "io.ktor:ktor-client-json", version.ref = "ktor" }
+ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+json-json = { module = "org.json:json", version.ref = "json" }
+debatty-java-string-similarity = { module = "info.debatty:java-string-similarity", version.ref = "debattyStringSimilarity" }
+apache-commons-rng-simple = { module = "org.apache.commons:commons-rng-simple", version.ref = "apacheCommonsRng" }
+apache-commons-rng-sampling = { module = "org.apache.commons:commons-rng-sampling", version.ref = "apacheCommonsRng" }
+imgscalr = { module = "org.imgscalr:imgscalr-lib", version.ref = "imgscalr" }
+mongodb-driver-kotlin = { module = "org.mongodb:mongodb-driver-kotlin-coroutine", version.ref = "mongodbDriver" }
+minn-discord-webhooks = { module = "club.minnced:discord-webhooks", version.ref = "discordWebhooks" }
+freya-jda-ktx = { module = "com.github.freya022:jda-ktx", version.ref = "jdaKtxv2" }
+# minn-jda-ktx = { module = "io.github.minndevelopment:jda-ktx", version.ref = "jdaKtx" }
+oshi-core = { module = "com.github.oshi:oshi-core", version.ref = "oshi" } # System info
+jansi = { module = "org.fusesource.jansi:jansi", version.ref = "jansi" } # For colored console output
+jda = { module = "net.dv8tion:JDA", version.ref = "jda" }
+icu4j = { module = "com.ibm.icu:icu4j", version.ref = "i4jv" }
+prometheus-core = { module = "io.prometheus:prometheus-metrics-core", version.ref = "prometheus" }
+prometheus-instrumentation = { module = "io.prometheus:prometheus-metrics-instrumentation-jvm", version.ref = "prometheus" }
+prometheus-exporter = { module = "io.prometheus:prometheus-metrics-exporter-httpserver", version.ref = "prometheus" }
+skiko-core = { module = "org.jetbrains.skiko:skiko", version.ref = "skiko" }
+skiko-awt-windows = { module = "org.jetbrains.skiko:skiko-awt-runtime-windows-x64", version.ref = "skiko" }
+skiko-awt-linux = { module = "org.jetbrains.skiko:skiko-awt-runtime-linux-arm64", version.ref = "skiko" }
+skiko-awt-macos = { module = "org.jetbrains.skiko:skiko-awt-runtime-macos-arm64", version.ref = "skiko" }
